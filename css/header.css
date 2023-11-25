@@ -91,6 +91,7 @@
   .nav-mobile {
     display: none;
     position: absolute;
+    width: 100%;
     top: 75px;
     right: 0;
   }
