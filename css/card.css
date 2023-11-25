@@ -1,5 +1,6 @@
 main {
   background-color: var(--theme-color);
+  padding-top: 75px;
 }
 
 .stand-info {

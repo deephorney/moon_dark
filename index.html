@@ -10,7 +10,7 @@
     <meta name="keywords" content="Одежда, moon dark, магазин" />
     <meta name="creator" content="Tolmach Vladimir" />
     <meta name="robots" content="index, folow" />
-    <meta property="og:image" content="img/icon.png" />
+    <meta property="og:image" content="./img/icon.png" />
     <meta property="og:url" content="http://192.168.1.7:5500/index.html" />
     <meta property="og:title" content="moon dark" />
     <meta
@@ -64,7 +64,7 @@
       <!-- HEADER -->
       <header>
         <div class="header">
-          <a class="logo" href="index.html">
+          <a class="logo" href="./index.html">
             <img
               class="black_hole_img"
               src="./img/icon.png"
@@ -76,13 +76,14 @@
           <div>
             <nav class="header-nav">
               <ul class="hedaer-nav-ul">
-                <li><a href="index.html">Главная</a></li>
+                <li><a href="./index.html">Главная</a></li>
                 <li><a href="./html/catalog.html">Каталог</a></li>
                 <li><a href="./html/size_clothes.html">Подбор размера</a></li>
                 <li><a href="./html/about.html">О нас</a></li>
               </ul>
             </nav>
           </div>
+
           <!-- CART AND THEME -->
           <div class="theme-and-cart">
             <button class="theme__button__night">
@@ -149,16 +150,26 @@
               </svg>
             </a>
           </div>
-        </div>
-        <div class="nav-mobile">
-          <nav class="header-nav-mobile">
-            <ul class="hedaer-nav-ul-mobile">
-              <li><a href="index.html">Главная</a></li>
-              <li><a href="./html/catalog.html">Каталог</a></li>
-              <li><a href="./html/size_clothes.html">Подбор размера</a></li>
-              <li><a href="./html/about.html">О нас</a></li>
-            </ul>
-          </nav>
+
+          <!-- MOBILE -->
+
+          <div class="mobile-burger">
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-btn" for="menu-toggle">
+              <span></span>
+            </label>
+
+            <div class="nav-mobile">
+              <nav class="header-nav-mobile">
+                <ul class="hedaer-nav-ul-mobile">
+                  <li><a href="./index.html">Главная</a></li>
+                  <li><a href="./html/catalog.html">Каталог</a></li>
+                  <li><a href="./html/size_clothes.html">Подбор размера</a></li>
+                  <li><a href="./html/about.html">О нас</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -179,12 +190,12 @@
           <div class="card-about-info">
             <div class="catalog">
               <div class="image-man-catalog">
-                <a href="#" class="">
+                <a href="./html/catalog.html" class="">
                   <img src="./img/man_catalog.jpeg" alt="" />
                 </a>
               </div>
               <div class="image-woman-catalog">
-                <a href="#" class="">
+                <a href="./html/catalog.html" class="">
                   <img src="./img/woman_catalog.jpeg" alt="" />
                 </a>
               </div>
@@ -195,7 +206,7 @@
 
       <footer>
         <div class="footer-logo">
-          <a class="logo" href="index.html">
+          <a class="logo" href="./index.html">
             <img
               class="footer_logo_img"
               src="./img/icon.png"
@@ -206,10 +217,10 @@
         </div>
         <div class="footer-links">
           <ul>
-            <li><a href="main_page.html">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Подбор размера</a></li>
+            <li><a href="./index.html">Главная</a></li>
+            <li><a href="./html/catalog.html">Каталог</a></li>
+            <li><a href="./html/about.html">О нас</a></li>
+            <li><a href="./html/size_clothes.html">Подбор размера</a></li>
           </ul>
         </div>
         <div class="footer-social">
