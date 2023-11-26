@@ -12,12 +12,18 @@
   --primary-color: #ffffff;
 }
 
+main {
+  background-color: var(--theme-color);
+  padding-top: 75px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   transition: all 0.1s;
   font-family: "Playfair Display", serif;
+  color: var(--primary-color);
 }
 
 .header {
@@ -86,6 +92,9 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    height: 50px;
+  }
   .hedaer-nav-ul {
     display: none;
   }

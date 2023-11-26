@@ -1,0 +1,31 @@
+.table-size-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 5px;
+}
+
+td {
+  border-collapse: collapse;
+  border: 3px solid var(--primary-color);
+  padding: 10px;
+}
+.name-of-clothes {
+  padding: 5px;
+  margin-top: 20px;
+  text-align: center;
+  color: red;
+}
+
+.name-of-gender {
+  padding: 10px;
+  color: orange;
+}
