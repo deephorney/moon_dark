@@ -151,7 +151,8 @@ main {
 }
 
 .image_modal_clothes {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .image_about {
@@ -179,9 +180,16 @@ main {
 .form_radio_btn {
   display: inline-block;
   margin-right: 10px;
+  position: relative;
 }
+
 .form_radio_btn input[type="radio"] {
+  cursor: pointer;
   opacity: 0;
+  transform: scale(3.5);
+  position: absolute;
+  top: 10px;
+  left: 16px;
 }
 
 .form_radio_btn label {
@@ -194,8 +202,7 @@ main {
   user-select: none;
 }
 
-/* Checked */
-.form_radio_btn input[type="radio"]:checked + label {
+.form_radio_btn input[name="contact"]:checked + label {
   background: var(--primary-color);
   color: var(--theme-color);
 }
@@ -266,4 +273,22 @@ main {
     display: flex;
     flex-direction: column;
   }
+}
+
+.attention-container {
+  z-index: 9999;
+  position: fixed;
+  margin-top: 75px;
+  top: 0;
+  right: 0;
+}
+
+.attention {
+  border-radius: 5%;
+  background-color: var(--primary-color);
+  color: var(--theme-color);
+  padding: 5px;
+  width: 200px;
+  height: 70px;
+  margin: 20px;
 }
