@@ -176,8 +176,38 @@
       </header>
 
       <main>
+        <div class="filter-list">
+          <ul class="list_gender">
+            <li>
+              <p
+                class="gender_item"
+                style="text-decoration: underline"
+                data-id="allGender"
+              >
+                Все
+              </p>
+            </li>
+            <li><p class="gender_item" data-id="man">Мужское</p></li>
+            <li><p class="gender_item" data-id="woman">Женское</p></li>
+          </ul>
+          <!-- <ul class="list-clothes">
+            <li>
+              <p
+                style="text-decoration: underline"
+                class="clothes_item"
+                data-id="allClothes"
+              >
+                Вся одежда
+              </p>
+            </li>
+            <li><p class="clothes_item" data-id="hoodie">Худи</p></li>
+            <li><p class="clothes_item" data-id="jeans">Брюки</p></li>
+            <li><p class="clothes_item" data-id="short">Шорты</p></li>
+            <li><p class="clothes_item" data-id="tshort">Футболки</p></li>
+          </ul> -->
+        </div>
         <div class="container">
-          <div class="container-card">
+          <div class="container-card all man woman hoodie">
             <div class="card-of-clothes">
               <div class="image-clothes">
                 <img
@@ -192,8 +222,61 @@
                 <p>4.999</p>
               </div>
             </div>
+            <div class="modal_page">
+              <div class="container_close">
+                <span class="close"> </span>
+              </div>
+              <div class="image_about">
+                <div class="image_modal_clothes">
+                  <img
+                    width="100%"
+                    height="100%"
+                    src="../img/store/hoode/classic/first-classic-1-u.jpeg"
+                    alt=""
+                  />
+                  <span class="name_modal_clothes"> ХУДИ ИЧИГО</span>
+                </div>
+                <div class="about_modal_clothes">
+                  <p>
+                    Теплая и мягкая к телу толстовка из высококачественного
+                    хлопка с подкладкой из флиса. Просторный основной карман
+                    скрывает внутри несколько небольших карманов для мелочи,
+                    ключей или телефона. Свободный крой позволит оставаться
+                    активным даже в прохладную погоду. Персонаж Ичиго Куросаки,
+                    аниме Блич. <br />
+                    <br />Каждый день Куросаки Ичиго приходится защищать свой
+                    город от нашествия Пустых. Но страшен не тот враг, который
+                    поджидает в темном переулке, а тот, кто таится в глубине
+                    твоей души. Здесь у главного героя и находится место самой
+                    ожесточенной схватки, ведь что может быть труднее, чем
+                    вступить в сражение с внутренним демоном, который питается
+                    твоими страхами, и выйти из него победителем? <br />
+                    <br />Для противостояния с тёмной стороной своей души нужно
+                    набраться большой уверенности в себе. Но откуда же её взять?
+                    Как минимум стоит начать с того, чтобы надеть на себя
+                    лимитированное чёрное худи, на котором главный герой аниме
+                    BLEACH уже обуздал свою тёмную сторону.
+                  </p>
+                </div>
+              </div>
+              <div class="choose_size">
+                <div class="S">
+                  <input type="radio" id="S" name="contact" required />
+                  <label for="S">S</label>
+                </div>
+                <div class="M">
+                  <input type="radio" id="M" name="contact" required />
+                  <label for="M">M</label>
+                </div>
+                <div class="L">
+                  <input type="radio" id="L" name="contact" required />
+                  <label for="L">L</label>
+                </div>
+              </div>
+              <button name="contact" class="buy_item">купить</button>
+            </div>
           </div>
-          <div class="container-card">
+          <div class="container-card man woman all hoodie">
             <div class="card-of-clothes">
               <div class="image-clothes">
                 <img
@@ -212,7 +295,7 @@
               </div>
             </div>
           </div>
-          <div class="container-card">
+          <div class="container-card man jeans">
             <div class="card-of-clothes">
               <div class="image-clothes">
                 <img
@@ -231,7 +314,7 @@
               </div>
             </div>
           </div>
-          <div class="container-card">
+          <div class="container-card woman jeans">
             <div class="card-of-clothes">
               <div class="image-clothes">
                 <img
@@ -244,13 +327,13 @@
               <div class="name-and-price">
                 <h2>
                   БРЮКИ <br />
-                  HUNTER-X-HUNTER
+                  HUNTER
                 </h2>
                 <p>4.999</p>
               </div>
             </div>
           </div>
-          <div class="container-card">
+          <div class="container-card man short">
             <div class="card-of-clothes">
               <div class="image-clothes">
                 <img
@@ -263,13 +346,13 @@
               <div class="name-and-price">
                 <h2>
                   ШОРТЫ <br />
-                  ЧЕЛОВЕК-БЕНЗОПИЛА
+                  БЕНЗОПИЛА
                 </h2>
                 <p>4.999</p>
               </div>
             </div>
           </div>
-          <div class="container-card">
+          <div class="container-card woman short">
             <div class="card-of-clothes">
               <div class="image-clothes">
                 <img
@@ -288,7 +371,7 @@
               </div>
             </div>
           </div>
-          <div class="container-card">
+          <div class="container-card man tshort">
             <div class="card-of-clothes">
               <div class="image-clothes">
                 <img
@@ -307,7 +390,7 @@
               </div>
             </div>
           </div>
-          <div class="container-card">
+          <div class="container-card woman tshort">
             <div class="card-of-clothes">
               <div class="image-clothes">
                 <img
@@ -380,5 +463,7 @@
       </footer>
     </div>
     <script src="../js/theme.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/filter.js"></script>
   </body>
 </html>
