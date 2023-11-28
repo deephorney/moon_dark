@@ -26,9 +26,7 @@ function closeModal(e) {
     const modal = e.target
       .closest(".container-card")
       .querySelector(".modal_page");
-    console.log(modal);
     modal.style.display = "none";
-    console.log(modal);
     mainOverflow.style.overflow = "visible";
     active = false;
     const closeModel = modal.querySelector(".close");
@@ -41,20 +39,46 @@ function closeModal(e) {
 
 function buyItem(e) {
   e.preventDefault();
-  const modal = e.target
+
+  const form = e.target
     .closest(".container-card")
-    .querySelector(".modal_page");
-  closeModal(e);
+    .querySelector(".modal_page")
+    .querySelector("form");
 
-  const chip = document.createElement("div");
-  chip.classList.add("attention");
-  const nameClothe = modal.querySelector(".name_modal_clothes").textContent;
-  chip.innerText = `Вещь "${nameClothe}" добавлена в корзину!`;
-  document.querySelector(".attention-container").appendChild(chip);
+  let selectedSize;
 
-  setTimeout(() => {
-    chip.remove();
-  }, 3000);
+  let sizeRadios = form.elements["contact"];
+  for (let i = 0; i < sizeRadios.length; i++) {
+    if (sizeRadios[i].type == "radio" && sizeRadios[i].checked) {
+      selectedSize = sizeRadios[i].value;
+      break;
+    }
+  }
+
+  if (selectedSize) {
+    const modal = e.target
+      .closest(".container-card")
+      .querySelector(".modal_page");
+    closeModal(e);
+
+    const chip = document.createElement("div");
+    chip.classList.add("attention");
+    const nameClothe = modal.querySelector(".name_modal_clothes").textContent;
+    chip.innerText = `Вещь "${nameClothe}" добавлена в корзину!`;
+    document.querySelector(".attention-container").appendChild(chip);
+
+    setTimeout(() => {
+      chip.remove();
+    }, 2000);
+  } else {
+    const chip = document.createElement("div");
+    chip.classList.add("attention");
+    chip.innerText = `Выберите размер!`;
+    document.querySelector(".attention-container").appendChild(chip);
+    setTimeout(() => {
+      chip.remove();
+    }, 2000);
+  }
 }
 
 card.addEventListener("click", function open(event) {
