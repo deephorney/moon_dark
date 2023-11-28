@@ -48,7 +48,8 @@ function buyItem(e) {
   let selectedSize;
 
   let sizeRadios = form.elements["contact"];
-  for (let i = 0; i < sizeRadios.length; i++) {
+  let i = 0;
+  for (i; i < sizeRadios.length; i++) {
     if (sizeRadios[i].type == "radio" && sizeRadios[i].checked) {
       selectedSize = sizeRadios[i].value;
       break;
@@ -66,7 +67,14 @@ function buyItem(e) {
     const nameClothe = modal.querySelector(".name_modal_clothes").textContent;
     chip.innerText = `Вещь "${nameClothe}" добавлена в корзину!`;
     document.querySelector(".attention-container").appendChild(chip);
-
+    let item = {
+      id: modal.getAttribute("id"),
+      name: nameClothe,
+      price: modal.querySelector(".price").textContent,
+      size: sizeRadios[i].getAttribute("id"),
+      img: modal.querySelector(".image_clothes").getAttribute("src"),
+    };
+    console.log(item);
     setTimeout(() => {
       chip.remove();
     }, 2000);
