@@ -223,3 +223,47 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .image_about {
+    flex-direction: column;
+  }
+  .modal_page {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 10vw;
+    top: 10vh;
+    width: 80%;
+    height: 90%;
+    background-color: var(--theme-color);
+    border: 2px solid var(--primary-color);
+    overflow: scroll;
+  }
+
+  .name_modal_clothes {
+    font-size: calc(16px + 1vw);
+  }
+
+  .image_modal_clothes {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .image_about {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .about_modal_clothes {
+    width: 100%;
+    max-width: 300px;
+    gap: 20px;
+  }
+
+  .choose_size {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
