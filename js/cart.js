@@ -4,16 +4,22 @@ let id = [1, 2, 3, 4, 5, 6, 7, 8];
 
 let arrayItem = [];
 
+let allPrice = 0;
+
 const cart = document.querySelector(".carting");
 
 const spaceText = document.querySelector(".space_text_cart");
+
+const price = document.querySelector(".price_and_submit");
 
 for (let i = 0; i < id.length; i++) {
   for (let j = 0; j < size.length; j++) {
     let key = id[i] + size[j];
     if (localStorage.getItem(key)) {
+      price.style.display = "flex";
       spaceText.style.display = "none";
       let item = JSON.parse(localStorage.getItem(key));
+      allPrice += item.price * item.count;
       const cartItemHTML = `       
     <div data-id="${key}" class="cart-element">
     <div style="font-size: 0;" class="image-element">
@@ -60,13 +66,18 @@ for (let i = 0; i < id.length; i++) {
   }
 }
 
+let priceText = document.querySelector(".price_all_clothes");
+priceText.innerText = allPrice;
+
 function delCartItem(e) {
   const item = e.closest(".cart-element");
   const temp = item.getAttribute("data-id");
-  console.log(temp);
+  allPrice -= item.querySelector(".price-element").textContent.match(/\d+/);
+  priceText.innerText = allPrice;
   localStorage.removeItem(temp);
   item.remove();
   if (!document.querySelector(".cart-element")) {
     spaceText.style.display = "block";
+    price.style.display = "none";
   }
 }
