@@ -4,3 +4,27 @@
   align-items: center;
   justify-content: center;
 }
+
+.carting {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+.cart-element {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--primary-color);
+  align-items: center;
+}
+
+.text_about_element {
+  display: flex;
+  flex-direction: column;
+}
+
+.delete {
+  cursor: pointer;
+}

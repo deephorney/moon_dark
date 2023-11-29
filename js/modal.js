@@ -70,12 +70,19 @@ function buyItem(e) {
     let item = {
       id: modal.getAttribute("id"),
       name: nameClothe,
-      price: modal.querySelector(".price").textContent,
+      price: modal.querySelector(".price").textContent.match(/\d+/),
       size: sizeRadios[i].getAttribute("id"),
       img: modal.querySelector(".image_clothes").getAttribute("src"),
       count: 1,
     };
-    console.log(item);
+    let key = item.id + item.size;
+    if (!localStorage.getItem(key)) {
+      localStorage.setItem(key, JSON.stringify(item));
+    } else {
+      item = JSON.parse(localStorage.getItem(key));
+      item.count += 1;
+      localStorage.setItem(key, JSON.stringify(item));
+    }
     setTimeout(() => {
       chip.remove();
     }, 2000);
