@@ -2,6 +2,8 @@ let size = ["S", "M", "L"];
 
 let id = [1, 2, 3, 4, 5, 6, 7, 8];
 
+let arrayItem = [];
+
 const cart = document.querySelector(".carting");
 
 const spaceText = document.querySelector(".space_text_cart");
@@ -13,9 +15,9 @@ for (let i = 0; i < id.length; i++) {
       spaceText.style.display = "none";
       let item = JSON.parse(localStorage.getItem(key));
       const cartItemHTML = `       
-    <div data-id="${item.id}" class="cart-element">
-    <div class="image-element">
-      <img style="width: 100px" src="${item.img}" alt="" />
+    <div data-id="${key}" class="cart-element">
+    <div style="font-size: 0;" class="image-element">
+      <img style="height: 132px;" src="${item.img}" alt="" />
     </div>
     <div class="text_about_element">
       <div>
@@ -32,7 +34,7 @@ for (let i = 0; i < id.length; i++) {
       </div>
     </div>
     <div>
-      <span class="delete"><svg
+      <button onclick="delCartItem(this)" class="delete"><svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -50,10 +52,21 @@ for (let i = 0; i < id.length; i++) {
         <line x1="10" x2="10" y1="11" y2="17" />
         <line x1="14" x2="14" y1="11" y2="17" />
       </svg>
-      </span>
+      </button>
     </div>
   </div>`;
       cart.insertAdjacentHTML(`beforeend`, cartItemHTML);
     }
+  }
+}
+
+function delCartItem(e) {
+  const item = e.closest(".cart-element");
+  const temp = item.getAttribute("data-id");
+  console.log(temp);
+  localStorage.removeItem(temp);
+  item.remove();
+  if (!document.querySelector(".cart-element")) {
+    spaceText.style.display = "block";
   }
 }
