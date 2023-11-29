@@ -291,5 +291,7 @@ main {
   width: 200px;
   height: 70px;
   margin: 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

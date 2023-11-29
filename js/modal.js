@@ -73,6 +73,7 @@ function buyItem(e) {
       price: modal.querySelector(".price").textContent,
       size: sizeRadios[i].getAttribute("id"),
       img: modal.querySelector(".image_clothes").getAttribute("src"),
+      count: 1,
     };
     console.log(item);
     setTimeout(() => {
