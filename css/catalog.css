@@ -3,15 +3,22 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
 }
 
 .filter-list {
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 80%;
   margin: 25px;
 }
+
 @media (max-width: 768px) {
   .filter-list {
     flex-direction: column;
